@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UNIVERSITY>
+    <VARSITY_NAME>JAHANGIRNAGAR UNIVERSITY</VARSITY_NAME>
+    <LOCATION>Savar Dhaka Bangladesh</LOCATION>
+    <STUDENT>
+        <STUDENT_NAME>KISHALOY DAS</STUDENT_NAME>
+        <EXAM>
+              <SEMESTER>
+                    <TITLE_SEMESTER>1st Semester 2013 Prerequisite</TITLE_SEMESTER>
+                    <COURSE>
+                          <COURSE_CODE>607</COURSE_CODE>
+                          <COURSE_TITLE>Data Communication</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>Pass</LETTER_GRADE>
+                          <GRADE_POINT></GRADE_POINT>
+                    </COURSE>
+                    <COURSE>
+                          <COURSE_CODE>612</COURSE_CODE>
+                          <COURSE_TITLE>Database System</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>Pass</LETTER_GRADE>
+                          <GRADE_POINT></GRADE_POINT>
+                    </COURSE>
+                    
+                    
+                    <GPA>Pass</GPA>
+              </SEMESTER>
+        
+               <SEMESTER>
+                    <TITLE_SEMESTER>2nd Semester 2014</TITLE_SEMESTER>
+                    <COURSE>
+                          <COURSE_CODE>674</COURSE_CODE>
+                          <COURSE_TITLE>Switching and Routing Technology</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>A</LETTER_GRADE>
+                          <GRADE_POINT>3.75</GRADE_POINT>
+                    </COURSE>
+                    <COURSE>
+                          <COURSE_CODE>675</COURSE_CODE>
+                          <COURSE_TITLE>Network Security</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>A+</LETTER_GRADE>
+                          <GRADE_POINT>4</GRADE_POINT>
+                    </COURSE>
+                    <COURSE>
+                          <COURSE_CODE>678</COURSE_CODE>
+                          <COURSE_TITLE>Embedded System Engineering</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>B-</LETTER_GRADE>
+                          <GRADE_POINT>2.75</GRADE_POINT>
+                    </COURSE>
+                    
+                    <COURSE>
+                          <COURSE_CODE>682</COURSE_CODE>
+                          <COURSE_TITLE>Information Theory and Coding System</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>A</LETTER_GRADE>
+                          <GRADE_POINT>3.75</GRADE_POINT>
+                    </COURSE>
+                    
+                    
+                    
+                    <GPA>3.56</GPA>
+              </SEMESTER>
+              
+          
+              <SEMESTER>
+                    <TITLE_SEMESTER>3rd Semester 2014</TITLE_SEMESTER>
+                    <COURSE>
+                          <COURSE_CODE>659</COURSE_CODE>
+                          <COURSE_TITLE>Network Management</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>A+</LETTER_GRADE>
+                          <GRADE_POINT>4.00</GRADE_POINT>
+                    </COURSE>
+                    <COURSE>
+                          <COURSE_CODE>663</COURSE_CODE>
+                          <COURSE_TITLE>Digital Image Processing</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>B</LETTER_GRADE>
+                          <GRADE_POINT>3.00</GRADE_POINT>
+                    </COURSE>
+                    <COURSE>
+                          <COURSE_CODE>677</COURSE_CODE>
+                          <COURSE_TITLE>Neural Network</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>B+</LETTER_GRADE>
+                          <GRADE_POINT>3.25</GRADE_POINT>
+                    </COURSE>
+                    
+                    <COURSE>
+                          <COURSE_CODE>700</COURSE_CODE>
+                          <COURSE_TITLE>Research Project</COURSE_TITLE>
+                          <CREDIT_HOUR>3</CREDIT_HOUR>
+                          <LETTER_GRADE>A+</LETTER_GRADE>
+                          <GRADE_POINT>4.00</GRADE_POINT>
+                    </COURSE>
+                    
+                    
+                    
+                    <GPA>3.56</GPA>
+              </SEMESTER>
+        
+    
+        </EXAM>
+    </STUDENT>
+	<FINAL_RESULT>Final Result: Total Credit Hour-24 and Secured CGPA 3.56</FINAL_RESULT>
+	<FOOTER>
+			<LIST>
+				<TITLE_INFO>Prepared by</TITLE_INFO>
+				<PERSON_NAME>Name 1</PERSON_NAME>
+			</LIST>
+			<LIST>
+				<TITLE_INFO>Checked by</TITLE_INFO>
+				<PERSON_NAME>Name 2</PERSON_NAME>
+			</LIST>
+			<LIST>
+				<TITLE_INFO>Deputy Controller of Examinations</TITLE_INFO>
+				<PERSON_NAME>Name 3</PERSON_NAME>
+			</LIST>
+	</FOOTER>
+</UNIVERSITY>
+  

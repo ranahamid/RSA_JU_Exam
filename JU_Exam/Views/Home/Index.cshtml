@@ -1,0 +1,235 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout -homepage.cshtml";
+}
+
+
+@if (Request.IsAuthenticated)
+{
+  
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div id="hashload">
+
+            </div>
+            <div id="LoadTable">
+            </div>
+
+
+          
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<script>
+    var shaObj = new jsSHA("SHA-256", "TEXT");
+    shaObj.update("Rana Hamid");
+    var hash = shaObj.getHash("HEX");
+    document.getElementById('hashload').innerHTML = hash;
+
+</script>
+
+<script>
+
+    // var x = loadDoc();
+
+    function loadDoc() {
+
+
+        var xhttp, xmlDoc, txt = "", i, VARSITY_NAME, LOCATION, STUDENT_NAME;
+        if (window.XMLHttpRequest)
+        {
+            xhttp = new XMLHttpRequest();
+        }
+        else
+        {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xhttp.onreadystatechange = function ()
+        {
+            if (xhttp.readyState == 4 && xhttp.status == 200)
+            {
+
+                xmlDoc = xhttp.responseXML;
+                //alert("alert");
+
+                VARSITY_NAME = xmlDoc.getElementsByTagName("VARSITY_NAME");
+                txt = txt + "<h1 style=' text-align: center;color:#990000;'>" + "<img src='/JU/logo.jpg' height=60px;width=60px;></img>" + VARSITY_NAME[0].childNodes[0].nodeValue + "</h1>";
+                LOCATION = xmlDoc.getElementsByTagName("LOCATION");
+                txt = txt + "<h4 style=' text-align: center;color:#990000;margin-top: -20px;'>" + LOCATION[0].childNodes[0].nodeValue + "</h4>";
+
+                STUDENT_NAME = xmlDoc.getElementsByTagName("STUDENT_NAME");
+
+                txt = txt + "<h4 style=' text-align: left;'>" + "Name of Student: " + "<strong>" + STUDENT_NAME[0].childNodes[0].nodeValue + "</strong>" + "</h4>";
+
+
+
+                txt = txt + '<table class="table table-bordered table-responsive table-hover" style="width: 100%;" border="1"> <tr> <th>Name of Semester</th> <th>Course Code</th> <th>Course Title</th> <th>Credit Hour</th> <th>Letter Grade</th> <th>Grade Point</th> <th>GPA</th> </tr>';
+
+
+                SEMESTER = xmlDoc.getElementsByTagName("SEMESTER");
+
+
+                for (i = 0; i < SEMESTER.length; i++)
+                {
+                    txt = txt + "<tr>";
+
+
+                    incr = 0;
+                    while (true)
+                    {
+                        try {
+                            //  SEMESTER[i].getElementsByTagName("COURSE_CODE")[incr].childNodes[0].nodeValue;
+                            SEMESTER[i].getElementsByTagName("COURSE")[incr].childNodes[0].nodeValue;
+                            incr++;
+                        }
+                        catch (er)
+                        {
+                            break;
+                        }
+                    }
+                    //     txt = txt + "incr: " + incr;
+                    len = incr;
+                    try
+                    {
+                        txt = txt + "<td rowspan='" + len + "'>" + SEMESTER[i].getElementsByTagName("TITLE_SEMESTER")[0].childNodes[0].nodeValue + "</td>";
+                    }
+                    catch (er)
+                    {
+                        txt = txt + "<td>&nbsp;</td>";
+                    }
+
+                    for (j = 0; j < len; j++)
+                    {
+                        try
+                        {
+                            txt = txt + "<td>" + SEMESTER[i].getElementsByTagName("COURSE_CODE")[j].childNodes[0].nodeValue + "</td>";
+                        }
+                        catch (er)
+                        {
+                            txt = txt + "<td>&nbsp;</td>";
+                        }
+                        try
+                        {
+                            txt = txt + "<td>" + SEMESTER[i].getElementsByTagName("COURSE_TITLE")[j].childNodes[0].nodeValue + "</td>";
+                        }
+                        catch (er)
+                        {
+                            txt = txt + "<td>&nbsp;</td>";
+                        }
+
+                        try
+                        {
+                            txt = txt + "<td>" + SEMESTER[i].getElementsByTagName("CREDIT_HOUR")[j].childNodes[0].nodeValue + "</td>";
+                        }
+                        catch (er)
+                        {
+                            txt = txt + "<td>&nbsp;</td>";
+                        }
+
+                        try
+                        {
+                            txt = txt + "<td>" + SEMESTER[i].getElementsByTagName("LETTER_GRADE")[j].childNodes[0].nodeValue + "</td>";
+                        }
+                        catch (er)
+                        {
+                            txt = txt + "<td>&nbsp;</td>";
+                        }
+                        try
+                        {
+                            txt = txt + "<td>" + SEMESTER[i].getElementsByTagName("GRADE_POINT")[j].childNodes[0].nodeValue + "</td>";
+                        }
+                        catch (er)
+                        {
+                            txt = txt + "<td>&nbsp;</td>";
+                        }
+
+                        if (j == 0)
+                        {
+                            try
+                            {
+                                txt = txt + "<td rowspan='" + len + "'>" + SEMESTER[i].getElementsByTagName("GPA")[0].childNodes[0].nodeValue + "</td>";
+                            }
+                            catch (er)
+                            {
+                                txt = txt + "<td>&nbsp;</td>";
+                            }
+
+                        } txt = txt + "</tr>";
+                        txt = txt + "<tr>";
+                    }
+
+
+                    txt = txt + "</tr>";
+                }
+
+                txt = txt + "<tr>";
+                FINAL_RESULT = xmlDoc.getElementsByTagName("FINAL_RESULT");
+                len2 = 7;
+                txt = txt + "<td colspan='" + len2 + "' style='text-align:center'>" + FINAL_RESULT[0].childNodes[0].nodeValue + "</td>";
+                txt = txt + "</tr>";
+
+                txt = txt + "</table>";
+
+
+                txt = txt + "<div style='margin-top:130px;'></div>";
+                LIST = xmlDoc.getElementsByTagName("LIST");
+
+                //txt = txt + "<div style='margin-bottom:100px;></div>";
+
+
+                txt = txt + "<div class='container'><div class='row'><div class='col-md-3  col-md-offset-3'><img style='margin-bottom:10px;' src='/JU/seal.jpg' height=60px;width=60px;></img></div></div></div";
+                ////////////////////////
+
+                txt = txt + "<div class='row'>";
+
+                for (i = 0; i < LIST.length; i++)
+                {
+                    txt = txt + "<div class='col-md-4' style='min-height:100px'>";
+                    try
+                    {
+                        txt = txt + LIST[i].getElementsByTagName("TITLE_INFO")[0].childNodes[0].nodeValue;
+                    }
+                    catch (er)
+                    {
+                        txt = txt + "&nbsp;";
+                    }
+                    txt = txt + ":&nbsp; ";
+
+
+
+                    try
+                    {
+                        txt = txt + "<span style='border-bottom: 1px dotted #000;text-decoration: none;'>";
+                        txt = txt + LIST[i].getElementsByTagName("PERSON_NAME")[0].childNodes[0].nodeValue;
+                        txt = txt + "<span/>";
+                    }
+                    catch (er)
+                    {
+                        txt = txt + "&nbsp;";
+                    }
+                    txt = txt + "</div>";
+                }
+
+
+                txt = txt + "</div>" + "<div style='margin-bottom:100px;'>" + "&nbsp" + "</div>";
+
+                document.getElementById("LoadTable").innerHTML = txt;
+            }
+        }
+
+        xhttp.open("GET", "/JU/Varsity.xml", true);
+        xhttp.send();
+    }
+
+</script>
